@@ -7,6 +7,8 @@
 #include <QPushButton>
 #include <QDebug>
 #include <QString>
+#include <QSize>
+
 
 namespace Ui {
 class MainWindow;
@@ -15,9 +17,35 @@ class MainWindow;
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
+protected:
+    void paintEvent(QPaintEvent *);
 
 public:
     explicit MainWindow(QWidget *parent = 0);
+    void transto();
+    void anssave(double a);
+    void  yue(double a ,double b);
+
+
+
+    bool judge1();
+    bool judge2();
+    bool judge3();
+    bool judge4();
+    bool judge5();
+    bool judge6();
+    bool judge7();
+    bool judge8();
+    bool judge9();
+
+    double calcu( int a , int b);
+
+    QString start();
+    int YUE(double a, double b);
+    int BEI(double a, double b);
+
+
+
     ~MainWindow();
 
 private slots:
@@ -100,21 +128,22 @@ private slots:
     void on_BTYUE_clicked();
 
     void on_BTdaoshu_clicked();
-    void trans();
-    void anssave(double a);
-    void  yue(double a ,double b);
-
-
-    bool judge1();
-    bool judge2();
-
-    double calcu( int a , int b);
-
-    QString start();
 
     void on_BTlg_clicked();
 
     void on_BTmi_clicked();
+
+    void on_BTsqrt_clicked();
+
+    void on_BTbei_clicked();
+
+    void on_BTX_clicked();
+
+    void on_BTXX_clicked();
+
+    void on_BTAX_clicked();
+
+    void on_BTANS_clicked();
 
 private:
     Ui::MainWindow *ui;
